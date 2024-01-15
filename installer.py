@@ -16,8 +16,11 @@ blue1 = '\033[1;34m'
 pink = '\033[0;35m'
 nc = '\033[0m' # NoColor
 
+global_user= os.getlogin()
+
 # Function to print banner
 def about():
+    user = os.getcwd()
     print(f" {blue}----------------------------------------------------------")
     print(f" {blue}|{nc}         Simple Script to Install {green1}Go {nc}and {blue1}Nuclei         {blue}|{nc}")
     print(f" {blue}|{nc}                 {pink}Created by {yellow1}@shamanthss                 {blue}|{nc}")
@@ -48,14 +51,14 @@ def install_nuclei():
     command = ["go", "install", "-v", "github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest"]
     subprocess.run(command)
     # Add nuclei to /local/bin/
-    command1 = ["sudo", "cp", "/root/go/bin/nuclei", "/usr/local/go/bin/"]
-    subprocess.run(command1)
+    global global_user
+    subprocess.run(["sudo", "cp", f"/home/{global_user}/go/bin/nuclei", "/usr/local/go/bin/"])
 
 # Configure Nuclei with default templates
 def configure_nuclei():
     print("")
     print(f"{green} (+) Checking for Nuclei updates...")
-    command = ["sudo", "nuclei", "-update"]
+    command = ["nuclei", "-update"]
     subprocess.run(command)
     print("")
     print(f"{green} (+) Updating Nuclei...")
@@ -65,8 +68,8 @@ def configure_nuclei():
 # Main function
 def main():
     about()
-    install_dependencies()
-    install_go()
+    #install_dependencies()
+    #install_go()
     time.sleep(2)
     install_nuclei()
     configure_nuclei()
