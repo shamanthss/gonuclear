@@ -1,31 +1,46 @@
-<h1 align="center">
-  <br>
-  <img src="static/nuclei-logo.png" height="200px" width="200px" alt="nuclei"></a>
-  <img src="https://e7.pngegg.com/pngimages/239/7/png-clipart-gopher-docker-computer-programming-clojure-others-snout-computer-programming.png" height="200px" width="200px" alt="golang"></a>
-</h1>
+# GO Nuclear
+<img height="75" width="80" src="https://i.ibb.co/vDwwVDx/nuclei.png" alt="nuclei"/> <img height="100" width="90" src="https://i.ibb.co/b1jn8Vw/golang.png" alt="golang"/>
 
-# Go Nuclear
-
-Is your one-stop solution for effortlessly Installing and Configuring the latest versions of Go Programming Language and Nuclei Security Scanner by Project Discovery.
+Is your one-stop solution for effortlessly Installing and Configuring the latest versions of <b><u>Go Programming Language</u></b> and <b><u>Nuclei</u></b> Security Scanner by Project Discovery.
+<br>
 
 This automated tool ensures a streamlined and up-to-date environment, eliminating manual setup hassles. Empower your development and security workflows with ease and efficiency using Go Nuclear Installer.
-
-- Type some Markdown on the left
-- See HTML in the right
-- ✨Magic ✨
+<br>
+<br>
 
 ## Requirements
-- Python3
-<br>
-#### Building for source
-For production release:
-
+- <b>Git</b>
 ```sh
-python3 init.py
+$ sudo apt install git -y
 ```
+- <b>Python3</b>
+<br>
 
-Generating pre-built zip archives for distribution:
-
+## Executing Script
+Download the Script :
 ```sh
-python3 installer.py
+$ git install https://github.com/shamanthss/gonuclear.git
+```
+Change Directory :
+```sh
+$ cd gonuclear
+```
+<br>
+
+## Installing Dependencies and Config:
+```sh
+$ python3 init.py
+```
+<br>
+
+## Install and Auto-Config Go and Nuclei:
+```sh
+$ python3 installer.py
+```
+<br>
+
+## Verify Installation:
+```sh
+$ nuclei -version
+$ go version
 ```
