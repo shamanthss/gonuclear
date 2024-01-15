@@ -56,7 +56,7 @@ def add_path_ubuntu():
     print(f"{green} (+) Made changes successfully....{nc}")
     time.sleep(2)
     print("")
-    print(f"{yellow1} (*) Please execute {green1}sudo python3 installer.py{nc}")
+    print(f"{yellow1} (*) Please run {green1}python3 installer.py {yellow1}to continue with auto-install{nc}")
     print("")
     os.system("bash")    
 
