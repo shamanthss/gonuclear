@@ -11,7 +11,7 @@ This automated tool ensures a streamlined and up-to-date environment, eliminatin
 ## Requirements
 - <b>Git</b>
 ```sh
-$ sudo apt install git -y
+ sudo apt install git -y
 ```
 - <b>Python3</b>
 <br>
@@ -19,28 +19,28 @@ $ sudo apt install git -y
 ## Executing Script
 Download the Script :
 ```sh
-$ git clone https://github.com/shamanthss/gonuclear.git
+ git clone https://github.com/shamanthss/gonuclear.git
 ```
 Change Directory :
 ```sh
-$ cd gonuclear
+ cd gonuclear
 ```
 <br>
 
 ## Installing Dependencies and Config:
 ```sh
-$ python3 init.py
+ python3 init.py
 ```
 <br>
 
 ## Install and Auto-Config Go and Nuclei:
 ```sh
-$ python3 installer.py
+ python3 installer.py
 ```
 <br>
 
 ## Verify Installation:
 ```sh
-$ nuclei -version
-$ go version
+ nuclei -version
+ go version
 ```
