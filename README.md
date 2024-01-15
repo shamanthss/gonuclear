@@ -1,4 +1,4 @@
-# GO Nuclear
+# Go Nuclear
 <img height="75" width="80" src="https://i.ibb.co/vDwwVDx/nuclei.png" alt="nuclei"/> <img height="100" width="90" src="https://i.ibb.co/b1jn8Vw/golang.png" alt="golang"/>
 
 Is your one-stop solution for effortlessly Installing and Configuring the latest versions of <b><u>Go Programming Language</u></b> and <b><u>Nuclei</u></b> Security Scanner by Project Discovery.
