@@ -68,8 +68,8 @@ def configure_nuclei():
 # Main function
 def main():
     about()
-    #install_dependencies()
-    #install_go()
+    install_dependencies()
+    install_go()
     time.sleep(2)
     install_nuclei()
     configure_nuclei()
