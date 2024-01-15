@@ -28,22 +28,6 @@ def about():
     time.sleep(1)
     
 # Adding PATH to source file based on OS Option from check_os()
-def add_path_kali():
-    home_directory = os.path.expanduser("~")
-    zshrc_path = os.path.join(home_directory, ".zshrc")
-    print(f"{green} (+) Making changes to{yellow1}",zshrc_path)
-    with open(zshrc_path, "a") as zshrc_file:
-        zshrc_file.write("\n")
-        zshrc_file.write("GOPATH=/root/go-workspace\n")
-        zshrc_file.write("export GOROOT=/usr/local/go\n")
-        zshrc_file.write("PATH=$PATH:$GOROOT/bin/:$GOPATH/bin\n")
-    print(f"{green} (+) Made changes successfully....{nc}")
-    time.sleep(2)
-    print("")
-    print(f"{yellow1} Please execute {green1}sudo python3 installer.py{nc}")
-    print("")
-    os.system("zsh")
-
 def add_path_ubuntu():
     home_directory = os.path.expanduser("~")
     bashrc_path = os.path.join(home_directory, ".bashrc")
@@ -60,6 +44,22 @@ def add_path_ubuntu():
     print("")
     os.system("bash")    
 
+def add_path_kali():
+    home_directory = os.path.expanduser("~")
+    zshrc_path = os.path.join(home_directory, ".zshrc")
+    print(f"{green} (+) Making changes to{yellow1}",zshrc_path)
+    with open(zshrc_path, "a") as zshrc_file:
+        zshrc_file.write("\n")
+        zshrc_file.write("GOPATH=/root/go-workspace\n")
+        zshrc_file.write("export GOROOT=/usr/local/go\n")
+        zshrc_file.write("PATH=$PATH:$GOROOT/bin/:$GOPATH/bin\n")
+    print(f"{green} (+) Made changes successfully....{nc}")
+    time.sleep(2)
+    print("")
+    print(f"{yellow1} Please execute {green1}sudo python3 installer.py{nc}")
+    print("")
+    os.system("zsh")
+
 # Function to autofind the Operating System using os-release file    
 def find_os():
     try:
@@ -71,12 +71,9 @@ def find_os():
                     if os_id == "kali":
                         print(f"{green} (+) Operating System Detected: {blue1}Kali{nc}")
                         time.sleep(1)
-                        add_path_kali()
                     elif os_id == "ubuntu":
                         print(f"{green} (+) Operating System Detected: {yellow1}Ubuntu{nc}")
                         time.sleep(1)
-                        add_path_ubuntu()
-
                     return
     except FileNotFoundError:
         pass
@@ -87,6 +84,21 @@ def find_os():
     print(f"{nc} export GOROOT=/usr/local/go")
     print(f"{nc} PATH=$PATH:$GOROOT/bin/:$GOPATH/bin")
     print("")
+
+def conf_type():
+    print(f"{green} (+) Select your .rc file...")
+    print(f"{yellow}   1. bashrc")
+    print(f"{blue}   2. zshrc")
+    print(f"{green}   Enter 1 or 2 .....")
+    choice = input(f"{green} ---> ")
+    if choice == "1":
+        add_path_ubuntu()
+    elif choice == "2":
+        add_path_kali()
+    else:
+        print(f"{red} (X) ERROR!! no rc config file found or specified....")
+    
+
 def main():
     if os.geteuid() == 0:
         print("")
@@ -95,7 +107,7 @@ def main():
     else:
         about()
         find_os()
+        conf_type()
 
 # Calling main function        
 main()
-
