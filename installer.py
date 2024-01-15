@@ -78,7 +78,8 @@ def main():
     print(f"{green1} (+) Nuclei {green}installation and configuration completed successfully!{nc}")
     time.sleep(1)
     print(f"")
-    print(f"{green1} (+) Run {blue}nuclei -v {green1}to verify installation....")
+    print(f"{green1} (+) Run {green1}go version {green1}to verify installation....")
+    print(f"{green1} (+) Run {blue1}nuclei -version {green1}to verify installation....")
     print(f"")
 
 main()
