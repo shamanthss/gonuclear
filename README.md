@@ -19,7 +19,7 @@ $ sudo apt install git -y
 ## Executing Script
 Download the Script :
 ```sh
-$ git install https://github.com/shamanthss/gonuclear.git
+$ git clone https://github.com/shamanthss/gonuclear.git
 ```
 Change Directory :
 ```sh
