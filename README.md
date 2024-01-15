@@ -1,7 +1,7 @@
 <h1 align="center">
   <br>
-  <img src="static/nuclei-logo.png" height="20px" width="20px" alt="nuclei"></a>
-  <img src="https://e7.pngegg.com/pngimages/239/7/png-clipart-gopher-docker-computer-programming-clojure-others-snout-computer-programming.png" height="20px" width="20px" alt="golang"></a>
+  <img src="static/nuclei-logo.png" height="200px" width="200px" alt="nuclei"></a>
+  <img src="https://e7.pngegg.com/pngimages/239/7/png-clipart-gopher-docker-computer-programming-clojure-others-snout-computer-programming.png" height="200px" width="200px" alt="golang"></a>
 </h1>
 
 # Go Nuclear
